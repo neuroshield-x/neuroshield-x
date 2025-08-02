@@ -10,6 +10,17 @@
 <img width="300" alt="UI screenshot" src="https://github.com/user-attachments/assets/034f7abb-2529-480f-b019-c48b5c5d6364" />
 
 ---
+## poc live demo
+
+
+
+https://github.com/user-attachments/assets/7777a1b9-c206-4c2c-af66-7fa324f9ca00
+
+
+
+
+
+---
 
 ## 🔍 Problem
 
