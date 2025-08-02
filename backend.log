@@ -1,0 +1,170 @@
+INFO:     Will watch for changes in these directories: ['/Users/sapirshenhav/Desktop/hit 2025/סמסטר קיץ/ הנדסת פתרונות תוכנה ב/neuroshield-poc/backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [3676] using StatReload
+2025-08-02 15:01:46,995 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:01:46,995 INFO sqlalchemy.engine.Engine PRAGMA main.table_info("logs")
+2025-08-02 15:01:46,995 INFO sqlalchemy.engine.Engine [raw sql] ()
+2025-08-02 15:01:46,998 INFO sqlalchemy.engine.Engine COMMIT
+INFO:     Started server process [3707]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+🔍 Received log: {'timestamp': '2025-08-02 15:01:45', 'ip': '192.168.1.224', 'event': 'Port scanning detected', 'anomalyScore': 0.91, 'explanation': 'Multiple ports accessed in short time by same host.', 'recommendation': 'Monitor the IP or block if behavior continues.'}
+2025-08-02 15:01:47,737 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:01:47,740 INFO sqlalchemy.engine.Engine INSERT INTO logs (timestamp, ip, event, "anomalyScore", explanation, recommendation) VALUES (?, ?, ?, ?, ?, ?)
+2025-08-02 15:01:47,740 INFO sqlalchemy.engine.Engine [generated in 0.00032s] ('2025-08-02 15:01:45.000000', '192.168.1.224', 'Port scanning detected', 0.91, 'Multiple ports accessed in short time by same host.', 'Monitor the IP or block if behavior continues.')
+2025-08-02 15:01:47,741 INFO sqlalchemy.engine.Engine COMMIT
+✅ Log saved to DB.
+INFO:     127.0.0.1:50917 - "POST /analyze HTTP/1.1" 200 OK
+2025-08-02 15:01:50,966 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:01:50,976 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:01:50,976 INFO sqlalchemy.engine.Engine [generated in 0.00077s] (20, 0)
+2025-08-02 15:01:50,977 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50925 - "GET /api/logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50926 - "GET /api/detect HTTP/1.1" 200 OK
+2025-08-02 15:01:50,999 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:01:50,999 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:01:50,999 INFO sqlalchemy.engine.Engine [cached since 0.02422s ago] (20, 0)
+2025-08-02 15:01:51,000 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50925 - "GET /api/logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50926 - "GET /api/detect HTTP/1.1" 200 OK
+2025-08-02 15:01:55,960 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:01:55,961 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:01:55,961 INFO sqlalchemy.engine.Engine [cached since 4.977s ago] (20, 0)
+2025-08-02 15:01:55,961 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50926 - "GET /api/logs HTTP/1.1" 200 OK
+🔍 Received log: {'timestamp': '2025-08-02 15:01:57', 'ip': '192.168.1.139', 'event': 'High data exfiltration', 'anomalyScore': 0.71, 'explanation': 'Large volume of data sent externally.', 'recommendation': 'Limit outbound traffic and verify the recipient.'}
+2025-08-02 15:01:57,769 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:01:57,769 INFO sqlalchemy.engine.Engine INSERT INTO logs (timestamp, ip, event, "anomalyScore", explanation, recommendation) VALUES (?, ?, ?, ?, ?, ?)
+2025-08-02 15:01:57,769 INFO sqlalchemy.engine.Engine [cached since 10.01s ago] ('2025-08-02 15:01:57.000000', '192.168.1.139', 'High data exfiltration', 0.71, 'Large volume of data sent externally.', 'Limit outbound traffic and verify the recipient.')
+2025-08-02 15:01:57,770 INFO sqlalchemy.engine.Engine COMMIT
+✅ Log saved to DB.
+INFO:     127.0.0.1:50932 - "POST /analyze HTTP/1.1" 200 OK
+2025-08-02 15:02:00,968 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:00,968 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:00,969 INFO sqlalchemy.engine.Engine [cached since 9.978s ago] (20, 0)
+INFO:     127.0.0.1:50934 - "GET /api/detect HTTP/1.1" 200 OK
+2025-08-02 15:02:00,970 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50926 - "GET /api/logs HTTP/1.1" 200 OK
+2025-08-02 15:02:05,972 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:05,972 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:05,973 INFO sqlalchemy.engine.Engine [cached since 14.98s ago] (20, 0)
+2025-08-02 15:02:05,973 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50926 - "GET /api/logs HTTP/1.1" 200 OK
+🔍 Received log: {'timestamp': '2025-08-02 15:02:07', 'ip': '192.168.1.83', 'event': 'Failed login attempts', 'anomalyScore': 0.93, 'explanation': 'Unusual number of failed logins from a single IP address.', 'recommendation': 'Temporarily block IP 192.168.1.83 and enforce MFA.'}
+2025-08-02 15:02:07,789 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:07,789 INFO sqlalchemy.engine.Engine INSERT INTO logs (timestamp, ip, event, "anomalyScore", explanation, recommendation) VALUES (?, ?, ?, ?, ?, ?)
+2025-08-02 15:02:07,789 INFO sqlalchemy.engine.Engine [cached since 20.02s ago] ('2025-08-02 15:02:07.000000', '192.168.1.83', 'Failed login attempts', 0.93, 'Unusual number of failed logins from a single IP address.', 'Temporarily block IP 192.168.1.83 and enforce MFA.')
+2025-08-02 15:02:07,790 INFO sqlalchemy.engine.Engine COMMIT
+✅ Log saved to DB.
+INFO:     127.0.0.1:50936 - "POST /analyze HTTP/1.1" 200 OK
+2025-08-02 15:02:10,977 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:10,977 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:10,978 INFO sqlalchemy.engine.Engine [cached since 19.98s ago] (20, 0)
+INFO:     127.0.0.1:50937 - "GET /api/detect HTTP/1.1" 200 OK
+2025-08-02 15:02:10,979 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50926 - "GET /api/logs HTTP/1.1" 200 OK
+2025-08-02 15:02:15,980 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:15,981 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:15,981 INFO sqlalchemy.engine.Engine [cached since 24.98s ago] (20, 0)
+2025-08-02 15:02:15,982 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50926 - "GET /api/logs HTTP/1.1" 200 OK
+🔍 Received log: {'timestamp': '2025-08-02 15:02:17', 'ip': '192.168.1.93', 'event': 'Failed login attempts', 'anomalyScore': 0.95, 'explanation': 'Unusual number of failed logins from a single IP address.', 'recommendation': 'Temporarily block IP 192.168.1.93 and enforce MFA.'}
+2025-08-02 15:02:17,804 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:17,804 INFO sqlalchemy.engine.Engine INSERT INTO logs (timestamp, ip, event, "anomalyScore", explanation, recommendation) VALUES (?, ?, ?, ?, ?, ?)
+2025-08-02 15:02:17,805 INFO sqlalchemy.engine.Engine [cached since 30.03s ago] ('2025-08-02 15:02:17.000000', '192.168.1.93', 'Failed login attempts', 0.95, 'Unusual number of failed logins from a single IP address.', 'Temporarily block IP 192.168.1.93 and enforce MFA.')
+2025-08-02 15:02:17,805 INFO sqlalchemy.engine.Engine COMMIT
+✅ Log saved to DB.
+INFO:     127.0.0.1:50939 - "POST /analyze HTTP/1.1" 200 OK
+2025-08-02 15:02:21,582 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:21,583 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:21,583 INFO sqlalchemy.engine.Engine [cached since 30.58s ago] (20, 0)
+INFO:     127.0.0.1:50941 - "GET /api/detect HTTP/1.1" 200 OK
+2025-08-02 15:02:21,584 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50940 - "GET /api/logs HTTP/1.1" 200 OK
+2025-08-02 15:02:26,578 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:26,578 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:26,579 INFO sqlalchemy.engine.Engine [cached since 35.57s ago] (20, 0)
+2025-08-02 15:02:26,579 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50940 - "GET /api/logs HTTP/1.1" 200 OK
+🔍 Received log: {'timestamp': '2025-08-02 15:02:27', 'ip': '192.168.1.2', 'event': 'Suspicious file access', 'anomalyScore': 0.83, 'explanation': 'Sensitive files accessed outside of work hours.', 'recommendation': 'Investigate the user activity.'}
+2025-08-02 15:02:27,816 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:27,816 INFO sqlalchemy.engine.Engine INSERT INTO logs (timestamp, ip, event, "anomalyScore", explanation, recommendation) VALUES (?, ?, ?, ?, ?, ?)
+2025-08-02 15:02:27,816 INFO sqlalchemy.engine.Engine [cached since 40.04s ago] ('2025-08-02 15:02:27.000000', '192.168.1.2', 'Suspicious file access', 0.83, 'Sensitive files accessed outside of work hours.', 'Investigate the user activity.')
+2025-08-02 15:02:27,817 INFO sqlalchemy.engine.Engine COMMIT
+✅ Log saved to DB.
+INFO:     127.0.0.1:50943 - "POST /analyze HTTP/1.1" 200 OK
+2025-08-02 15:02:31,584 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:31,585 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:31,585 INFO sqlalchemy.engine.Engine [cached since 40.58s ago] (20, 0)
+2025-08-02 15:02:31,586 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50945 - "GET /api/detect HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50940 - "GET /api/logs HTTP/1.1" 200 OK
+🔍 Received log: {'timestamp': '2025-08-02 15:02:37', 'ip': '192.168.1.246', 'event': 'Failed login attempts', 'anomalyScore': 0.91, 'explanation': 'Unusual number of failed logins from a single IP address.', 'recommendation': 'Temporarily block IP 192.168.1.246 and enforce MFA.'}
+2025-08-02 15:02:37,830 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:37,831 INFO sqlalchemy.engine.Engine INSERT INTO logs (timestamp, ip, event, "anomalyScore", explanation, recommendation) VALUES (?, ?, ?, ?, ?, ?)
+2025-08-02 15:02:37,831 INFO sqlalchemy.engine.Engine [cached since 50.05s ago] ('2025-08-02 15:02:37.000000', '192.168.1.246', 'Failed login attempts', 0.91, 'Unusual number of failed logins from a single IP address.', 'Temporarily block IP 192.168.1.246 and enforce MFA.')
+2025-08-02 15:02:37,832 INFO sqlalchemy.engine.Engine COMMIT
+✅ Log saved to DB.
+INFO:     127.0.0.1:50948 - "POST /analyze HTTP/1.1" 200 OK
+2025-08-02 15:02:38,228 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:38,228 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:38,228 INFO sqlalchemy.engine.Engine [cached since 47.22s ago] (20, 0)
+2025-08-02 15:02:38,229 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50949 - "GET /api/logs HTTP/1.1" 200 OK
+2025-08-02 15:02:41,580 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:41,581 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:41,581 INFO sqlalchemy.engine.Engine [cached since 50.57s ago] (20, 0)
+INFO:     127.0.0.1:50950 - "GET /api/detect HTTP/1.1" 200 OK
+2025-08-02 15:02:41,583 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50949 - "GET /api/logs HTTP/1.1" 200 OK
+2025-08-02 15:02:46,582 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:46,582 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:46,582 INFO sqlalchemy.engine.Engine [cached since 55.57s ago] (20, 0)
+2025-08-02 15:02:46,584 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50949 - "GET /api/logs HTTP/1.1" 200 OK
+🔍 Received log: {'timestamp': '2025-08-02 15:02:47', 'ip': '192.168.1.117', 'event': 'Failed login attempts', 'anomalyScore': 0.77, 'explanation': 'Unusual number of failed logins from a single IP address.', 'recommendation': 'Temporarily block IP 192.168.1.117 and enforce MFA.'}
+2025-08-02 15:02:47,845 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:47,845 INFO sqlalchemy.engine.Engine INSERT INTO logs (timestamp, ip, event, "anomalyScore", explanation, recommendation) VALUES (?, ?, ?, ?, ?, ?)
+2025-08-02 15:02:47,845 INFO sqlalchemy.engine.Engine [cached since 60.07s ago] ('2025-08-02 15:02:47.000000', '192.168.1.117', 'Failed login attempts', 0.77, 'Unusual number of failed logins from a single IP address.', 'Temporarily block IP 192.168.1.117 and enforce MFA.')
+2025-08-02 15:02:47,846 INFO sqlalchemy.engine.Engine COMMIT
+✅ Log saved to DB.
+INFO:     127.0.0.1:50952 - "POST /analyze HTTP/1.1" 200 OK
+2025-08-02 15:02:51,321 INFO sqlalchemy.engine.Engine BEGIN (implicit)
+2025-08-02 15:02:51,321 INFO sqlalchemy.engine.Engine SELECT logs.id AS logs_id, logs.timestamp AS logs_timestamp, logs.ip AS logs_ip, logs.event AS logs_event, logs."anomalyScore" AS "logs_anomalyScore", logs.explanation AS logs_explanation, logs.recommendation AS logs_recommendation 
+FROM logs ORDER BY logs.timestamp DESC
+ LIMIT ? OFFSET ?
+2025-08-02 15:02:51,322 INFO sqlalchemy.engine.Engine [cached since 60.31s ago] (20, 0)
+2025-08-02 15:02:51,323 INFO sqlalchemy.engine.Engine ROLLBACK
+INFO:     127.0.0.1:50949 - "GET /api/logs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50953 - "GET /api/detect HTTP/1.1" 200 OK
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3707]
+INFO:     Stopping reloader process [3676]
